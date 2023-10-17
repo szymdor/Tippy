@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                 tvTipPercentLabel.text = "$progress%"
                 createTipTotal()
                 updateTipDescription(progress)
+                //createTotalPerPerson()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 Log.i(TAG, "afterTextChanged $s")
                 createTipTotal()
+                //createTotalPerPerson()
             }
 
         })
@@ -71,15 +73,17 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
             override fun afterTextChanged(s: Editable?) {
-                createTotalPerPerson()
+                Log.i(TAG, "afterTextChanged $s")
+                createTipTotal()
+                //createTotalPerPerson()
             }
 
         })
     }
 
-    private fun createTotalPerPerson() {
-        if (tvTotalAmount.text.isEmpty()) {
-            tvTotalPerPerson.text = ""
+    private fun createTotalPerPerson(amount :Double) {
+        if (etBaseAmount.text.isEmpty()) {
+
             return
         }
 
@@ -87,11 +91,10 @@ class MainActivity : AppCompatActivity() {
             tvTotalPerPerson.text = ""
             return
         }
-        
-        val totalAmount = tvTotalAmount.text.toString().toDouble()
+
         val numberOfPeople = etNumberOfPeople.text.toString().toDouble()
 
-        val totalPerPerson = totalAmount / numberOfPeople
+        val totalPerPerson = amount / numberOfPeople
 
         tvTotalPerPerson.text = "%.2f".format(totalPerPerson)
     }
@@ -120,6 +123,7 @@ class MainActivity : AppCompatActivity() {
         if (etBaseAmount.text.isEmpty()) {
             tvTotalAmount.text = ""
             tvTipAmount.text = ""
+            tvTotalPerPerson.text = ""
             return
         }
         val baseAmount = etBaseAmount.text.toString().toDouble()
@@ -130,5 +134,7 @@ class MainActivity : AppCompatActivity() {
 
         tvTipAmount.text = "%.2f".format(tipAmount)
         tvTotalAmount.text = "%.2f".format(totalAmount)
+
+        createTotalPerPerson(totalAmount)
     }
 }

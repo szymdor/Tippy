@@ -11,7 +11,7 @@
         android:id="@+id/tvBaseLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="48dp"
         android:text="@string/base_text"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,14 +69,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:ems="8"
+        android:autofillHints="amount"
+        android:ems="7"
         android:hint="@string/bill_amount_text"
         android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/tvBaseLabel"
         app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
-        app:layout_constraintTop_toTopOf="@id/tvBaseLabel"
-        android:autofillHints="amount" />
+        app:layout_constraintTop_toTopOf="@id/tvBaseLabel" />
 
     <SeekBar
         android:id="@+id/seekBarTip"
@@ -122,14 +122,15 @@
         android:id="@+id/etNumberOfPeople"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="8"
+        android:autofillHints="number"
+        android:ems="7"
         android:hint="@string/n_o_p_text"
         android:inputType="numberDecimal"
+        android:text="1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvSplitByLabel"
         app:layout_constraintStart_toStartOf="@+id/tvTotalAmount"
-        app:layout_constraintTop_toTopOf="@+id/tvSplitByLabel"
-        android:autofillHints="number" />
+        app:layout_constraintTop_toTopOf="@+id/tvSplitByLabel" />
 
     <TextView
         android:id="@+id/tvTotalPerPerson"
@@ -139,7 +140,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvPersonalTotalLabel"
         app:layout_constraintStart_toStartOf="@+id/etNumberOfPeople"
         app:layout_constraintTop_toTopOf="@+id/tvPersonalTotalLabel"
-        tools:text="6" />
+        tools:text="103.11" />
 
     <TextView
         android:id="@+id/tvFooter"

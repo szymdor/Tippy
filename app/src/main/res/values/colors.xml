@@ -6,7 +6,9 @@
     <color name="rose">#DEB6C0</color>
     <color name="dark_red">#5E2D3A</color>
     <color name="dark_yellow">#8A8657</color>
-    <color name="yellow">#DFDCB7</color>
+    <color name="yellow">#E1D98E</color>
+
+    <color name="dark_theme">#2E2933</color>
 
     <color name="worst_tip">#A80299</color>
     <color name="best_tip">#237A00</color>

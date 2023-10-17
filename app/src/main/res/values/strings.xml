@@ -7,6 +7,8 @@
     <string name="personal_text">Per person</string>
     <string name="bill_amount_text">Bill Amount</string>
     <string name="n_o_p_text">Number of people</string>
+    <string name="first_n_o_p_text">1</string>
     <string name="credits_text">Made with 🧁 by szymdor</string>
-    <string name="initial_percent_text">%1$s%</string>
+    <string name="initial_percent_text">15%</string>
+    <string name="current_percent_text">%2$d%</string>
 </resources>

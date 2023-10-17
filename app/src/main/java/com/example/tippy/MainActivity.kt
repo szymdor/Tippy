@@ -1,6 +1,7 @@
 package com.example.tippy
 
 import android.animation.ArgbEvaluator
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etNumberOfPeople: EditText
     private lateinit var tvTotalPerPerson: TextView
 
+    @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         tvTotalPerPerson = findViewById(R.id.tvTotalPerPerson)
 
         seekBarTip.progress = INITIAL_TIP_PERCENT
-        tvTipPercentLabel.text = "$INITIAL_TIP_PERCENT%" //getString(R.string.initial_percent_text, INITIAL_TIP_PERCENT.toString())
+        val k = getString(R.string.initial_percent_text)//, INITIAL_TIP_PERCENT)
+        tvTipPercentLabel.text = k
         updateTipDescription(INITIAL_TIP_PERCENT)
 
         seekBarTip.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
@@ -45,7 +48,6 @@ class MainActivity : AppCompatActivity() {
                 tvTipPercentLabel.text = "$progress%"
                 createTipTotal()
                 updateTipDescription(progress)
-                //createTotalPerPerson()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -62,7 +64,6 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 Log.i(TAG, "afterTextChanged $s")
                 createTipTotal()
-                //createTotalPerPerson()
             }
 
         })
@@ -75,7 +76,6 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 Log.i(TAG, "afterTextChanged $s")
                 createTipTotal()
-                //createTotalPerPerson()
             }
 
         })

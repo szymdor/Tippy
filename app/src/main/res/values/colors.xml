@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue">#B6D4DE</color>
+    <color name="rose">#DEB6C0</color>
+    <color name="dark_red">#5E2D3A</color>
+    <color name="dark_yellow">#8A8657</color>
+    <color name="yellow">#DFDCB7</color>
+
+    <color name="worst_tip">#A80299</color>
+    <color name="best_tip">#237A00</color>
+</resources>

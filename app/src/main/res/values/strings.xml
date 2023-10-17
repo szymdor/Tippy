@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tippy</string>
+    <string name="base_text">Base</string>
+    <string name="tip_text">Tip</string>
+    <string name="total_text">Total</string>
+    <string name="split_text">Split by</string>
+    <string name="personal_text">Total per person</string>
+    <string name="bill_amount_text">Bill Amount</string>
+    <string name="n_o_p_text">Number of people</string>
+    <string name="credits_text">Made with 🧁 by szymdor</string>
+    <string name="initial_percent_text">%1$s%</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Tippy" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/dark_red</item>
+        <!-- <item name="colorPrimaryVariant">@color/rose</item> -->
+        <item name="colorSecondary">@color/dark_yellow</item>
+        <item name="android:colorBackground">@color/light_blue</item>
+    </style>
+
+    <style name="Theme.Tippy" parent="Base.Theme.Tippy" />
+</resources>
